@@ -3,13 +3,47 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>TypeScript HTML App</title>
+  <title>AVR Assembler &amp; Debugger</title>
   <link type="text/css" href="app.css" rel="stylesheet" />
   <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-  <h1>TypeScript HTML App</h1>
-
-  <div id="content"></div>
+  <table>
+    <tr>
+      <td id="line-opcodes">
+        <br />
+        <br />
+        <br />
+        0000: -<br />
+        0000: E103<br />
+        0002: 0000<br />
+        0004: 0000<br />
+        0006: 9508<br />
+      </td>
+      <td id="line-numbers">
+        1<br />
+        2<br />
+        3<br />
+        4<br />
+        5<br />
+        6<br />
+        7<br />
+        8<br />
+        9<br />
+        10<br />
+        11<br />
+      </td>
+      <td id="line-codes">
+        <br />
+        <cc>// Test-Code</cc><br />
+        <br />
+        <cj>start:</cj><br />
+        &nbsp; <ci>ldi</ci> <cr>r16</cr>, <cn>0x12</cn><br />
+        &nbsp; <ci>nop</ci><br />
+        &nbsp; <ci>nop</ci><br />
+        <cj>ret</cj><br />
+      </td>
+    </tr>
+  </table>
 </body>
 </html>

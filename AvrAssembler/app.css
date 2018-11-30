@@ -1,9 +1,59 @@
-﻿body
+﻿/* ReSharper disable Html.TagNotResolved */
+body
 {
-  font-family: 'Segoe UI', sans-serif;
+  background-color: #191919;
 }
 
-span
+body, pre, table, tbody, tr, th, td
 {
-  font-style: italic;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+td
+{
+  font-family: Consolas, 'Lucida Console', 'Courier New', monospace;
+  font-size: 13px;
+  color: #dcdcdc;
+  vertical-align: top;
+  padding: 13px 5px;
+}
+
+#line-numbers
+{
+  color: #888;
+  text-align: right;
+}
+
+#line-opcodes
+{
+  color: #666;
+}
+
+/* font-colors */
+
+cc /* comment */
+{
+  color: #93c763;
+}
+
+ci /* default-instruction */
+{
+  color: #569cd6;
+}
+
+cj /* jmp/branch/call/ret */
+{
+  color: #d7ba7d;
+}
+
+cr /* registers */
+{
+  color: #00c0c0;
+}
+
+cn /* numbers */
+{
+  color: #ffcd22;
 }

@@ -7,15 +7,17 @@
   constructor(element: HTMLElement)
   {
     this.element = element;
-    this.element.innerHTML += "The time is: ";
-    this.span = document.createElement("span");
-    this.element.appendChild(this.span);
-    this.span.innerText = new Date().toUTCString();
+    this.update();
+  }
+
+  update()
+  {
+    //this.element.innerHTML = "";
   }
 
   start()
   {
-    this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
+    this.timerToken = setInterval(() => this.update(), 500);
   }
 
   stop()
@@ -27,7 +29,7 @@
 
 window.onload = () =>
 {
-  var el = document.getElementById("content");
+  var el = document.getElementById("line-codes");
   var greeter = new Greeter(el);
   greeter.start();
 };
