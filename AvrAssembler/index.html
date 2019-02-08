@@ -5,7 +5,9 @@
   <meta charset="utf-8" />
   <title>AVR Assembler &amp; Debugger</title>
   <link type="text/css" href="app.css" rel="stylesheet" />
-  <script type="text/javascript" src="app.js"></script>
+  <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
 </head>
 <body>
   <table>
@@ -33,15 +35,18 @@
         10<br />
         11<br />
       </td>
-      <td id="line-codes">
+      <td id="line-code" contenteditable="true" spellcheck="false">
         <br />
-        <cc>// Test-Code</cc><br />
+        // Test-Code<br />
         <br />
-        <cj>start:</cj><br />
-        &nbsp; <ci>ldi</ci> <cr>r16</cr>, <cn>0x12</cn><br />
-        &nbsp; <ci>nop</ci><br />
-        &nbsp; <ci>nop</ci><br />
-        <cj>ret</cj><br />
+        start:<br />
+        &nbsp; ldi r16, 0x12<br />
+        &nbsp; nop<br />
+        &nbsp; nop<br />
+        ret<br />
+        <br />
+        <br />
+        <br />
       </td>
     </tr>
   </table>
