@@ -1,23 +1,17 @@
-var Greeter = (function () {
-    function Greeter(element) {
+var AsmEditor = (function () {
+    function AsmEditor(element) {
         this.element = element;
-        this.update();
+        this.doFormat();
     }
-    Greeter.prototype.update = function () {
-        //this.element.innerHTML = "";
+    AsmEditor.prototype.doFormat = function () {
+        var str = this.element.innerHTML;
+        var lines = str.split("<br>");
+        console.log(lines);
     };
-    Greeter.prototype.start = function () {
-        var _this = this;
-        this.timerToken = setInterval(function () { return _this.update(); }, 500);
-    };
-    Greeter.prototype.stop = function () {
-        clearTimeout(this.timerToken);
-    };
-    return Greeter;
+    return AsmEditor;
 })();
+var asmEditor;
 window.onload = function () {
-    var el = document.getElementById("line-codes");
-    var greeter = new Greeter(el);
-    greeter.start();
+    asmEditor = new AsmEditor(document.getElementById("line-code"));
 };
 //# sourceMappingURL=app.js.map

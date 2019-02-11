@@ -1,35 +1,27 @@
-﻿class Greeter
+﻿
+class AsmEditor
 {
   element: HTMLElement;
   span: HTMLElement;
-  timerToken: number;
 
   constructor(element: HTMLElement)
   {
     this.element = element;
-    this.update();
+    this.doFormat();
   }
 
-  update()
+  doFormat()
   {
-    //this.element.innerHTML = "";
-  }
+    var str = this.element.innerHTML;
+    var lines = str.split("<br>");
 
-  start()
-  {
-    this.timerToken = setInterval(() => this.update(), 500);
+    console.log(lines);
   }
-
-  stop()
-  {
-    clearTimeout(this.timerToken);
-  }
-
 }
+
+var asmEditor: AsmEditor;
 
 window.onload = () =>
 {
-  var el = document.getElementById("line-codes");
-  var greeter = new Greeter(el);
-  greeter.start();
+  asmEditor = new AsmEditor(document.getElementById("line-code"));
 };
