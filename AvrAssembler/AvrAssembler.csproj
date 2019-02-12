@@ -20,6 +20,7 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="app.js" />
+    <Content Include="favicon.ico" />
     <Content Include="index.html" />
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="js\jquery-ui-1.12.1.min.js" />
