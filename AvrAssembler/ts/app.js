@@ -66,7 +66,7 @@ var AsmEditor = (function () {
         for (var i = 0; i < lines.length; i++)
             ll.push(lines[i].result);
         if (/Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)) {
-            this.element.innerHTML = ("<div>" + ll.join("</div><div>") + "</div>").replace(/<div><\/div>/g, "<div><br></div>");
+            this.element.innerHTML = ("<div>" + ll.join("</div><div>") + "</div>").replace(/<div><\/div>$/, "").replace(/<div><\/div>/g, "<div><br></div>");
         }
         else {
             this.element.innerHTML = ll.join("<br>\n");

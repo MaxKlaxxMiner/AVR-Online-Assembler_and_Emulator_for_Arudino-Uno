@@ -125,7 +125,7 @@ class AsmEditor
 
     if (/Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor))
     {
-      this.element.innerHTML = ("<div>" + ll.join("</div><div>") + "</div>").replace(/<div><\/div>/g, "<div><br></div>");
+      this.element.innerHTML = ("<div>" + ll.join("</div><div>") + "</div>").replace(/<div><\/div>$/, "").replace(/<div><\/div>/g, "<div><br></div>");
     }
     else
     {
